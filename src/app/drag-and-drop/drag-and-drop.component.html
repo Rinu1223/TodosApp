@@ -1,0 +1,29 @@
+
+   
+
+  <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)" >
+    <div class="example-box order" *ngFor="let todo of Todos" >  </div>
+    <div class="example-box title" *ngFor="let todo of Todos" cdkDrag>{{todo.order}} {{todo.title}}</div>
+  </div> -->
+   
+
+  <div >  
+    <h1 >Drag and drop to sort List</h1> 
+  <table>
+    <thead >
+      <tr class="example-box">
+        <th>Order</th>
+        <th>Todo</th>
+      </tr>
+    </thead>
+    <tbody class="example-list" cdkDropList (cdkDropListDropped)="drop($event)">
+      <tr class="example-box" style="width: 496px;" cdkDrag  *ngFor="let todo of Todos" >
+        <td> {{todo.order}} </td>
+        <td >{{todo.title}}</td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+  </div> 
+  
